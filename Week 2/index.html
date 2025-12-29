@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <link rel="stylesheet" href="styles.css"> </head>
+<body>
+    <div class="container">
+        <h1>📚 Course Registration</h1>
+        <form action="#" method="POST">
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g., 1234567890" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Selection</legend>
+                
+                <div class="form-group">
+                    <label for="course">Select Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">-- Choose a Course --</option>
+                        <option value="cs101">Introduction to Programming</option>
+                        <option value="web202">Advanced Web Development</option>
+                        <option value="data300">Data Science Fundamentals</option>
+                        <option value="ux404">UI/UX Design Principles</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Class Schedule:</label>
+                    <div>
+                        <input type="radio" id="morning" name="schedule" value="Morning" required>
+                        <label for="morning">Morning (9:00 AM)</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="afternoon" name="schedule" value="Afternoon">
+                        <label for="afternoon">Afternoon (1:00 PM)</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="evening" name="schedule" value="Evening">
+                        <label for="evening">Evening (6:00 PM)</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How did you hear about us? (Select all that apply):</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="social" name="source[]" value="Social Media">
+                        <label for="social">Social Media</label>
+                        
+                        <input type="checkbox" id="friend" name="source[]" value="Friend/Family">
+                        <label for="friend">Friend/Family</label>
+                        
+                        <input type="checkbox" id="search" name="source[]" value="Search Engine">
+                        <label for="search">Search Engine</label>
+                        
+                        <input type="checkbox" id="advert" name="source[]" value="Advertisement">
+                        <label for="advert">Advertisement</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <div class="form-group">
+                <label for="comments">Comments/Questions:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            
+            <button type="submit">Register Now</button>
+            <button type="reset" class="secondary">Reset Form</button>
+
+        </form>
+    </div>
+</body>
+</html>
